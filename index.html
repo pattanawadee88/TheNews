@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The News</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    <!-- Google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>The News</h1>
+    </header>
+    <nav>
+        <i class="material-icons">menu</i>
+        <time> Monday, July 19, 2021</time>
+    </nav>
+    
+    <section class="news-container">
+        <header class="news-headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</header>
+        <article class="news-content">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </article>
+        <button class="read-more-btn" onclick="">Read more</button>
+    </section>
+    
+   
+<script>
+    window.onload =  getnews();
+
+    const newsHeadline = document.querySelector('.news-headline');
+    const newsContent = document.querySelector('.news-content');
+    
+    function getnews(){
+        // event.preventDefault();
+        const apikey = '464ac3f62bf844eba24e0d2f52c72978';
+        
+        const url = 'https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=464ac3f62bf844eba24e0d2f52c72978';
+        fetch(url).then((res) => {
+            return res.json()
+        }).then((data)=>{
+            console.log(data);
+            newsHeadline.innerHTML = data.articles[8].title;
+            newsContent.innerHTML = data.articles[8].description;
+            // console.log(data.articles[0].title)
+        })
+    }
+</script>
+</body>
+</html>

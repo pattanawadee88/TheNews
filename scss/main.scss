@@ -1,0 +1,62 @@
+@import './utilities/variables';
+
+body{
+    margin: 0;
+    color: $color-primary;
+    background-color: $bg-primary;
+    font-family: 'Dosis', sans-serif;
+}
+
+header{
+    h1{
+        text-align: center;
+        font-family: 'Press Start 2P', cursive;
+        color: $color-primary;
+    }
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // width: 100%;
+    padding: 0.2em 0.5em;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+time{
+    font-size: 1rem;
+    font-family: 'Questrial', sans-serif;
+}
+section{
+    border-bottom: 1px solid black;
+}
+
+button{
+    background-color: $bg-primary;
+    border: 2px solid black;
+    box-shadow: -3px 3px black;
+    margin-bottom: 2em;
+}
+.news-container{
+    padding: 0.5em;
+    width: 90%;
+    margin: 0 auto;
+}
+.news-headline{
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'Dosis', sans-serif;
+    color: $color-primary;
+}
+.news-content{
+    font-family: 'Dosis', sans-serif;
+    color: rgb(104, 99, 99);
+    margin-top: 0.2em;
+}
+.read-more-btn{
+    margin-top: 1em;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
