@@ -44,14 +44,14 @@
     
     function getnews(){
       
-        const apikey = '464ac3f62bf844eba24e0d2f52c72978';
+        // const apikey = '464ac3f62bf844eba24e0d2f52c72978';
         
-        const url = 'https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=464ac3f62bf844eba24e0d2f52c72978';
+        const url = 'https://api.nytimes.com/svc/topstories/v2/world.json?api-key=G9k66bXLmyMt6vv61ul58QwnTAau9ItH';
         fetch(url).then((res) => {
             return res.json()
         }).then((data)=>{
             console.log(data);
-            // newsHeadline.innerHTML = data.articles[8].title;
+            newsHeadline.innerHTML = data.results[0].abstract;
             // newsContent.innerHTML = data.articles[8].description;
             // console.log(data.articles[0].title)
         })
