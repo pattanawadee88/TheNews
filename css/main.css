@@ -3,12 +3,16 @@ body {
   color: black;
   background-color: #F5F5F5;
   font-family: "Dosis", sans-serif;
+  box-sizing: border-box;
 }
 
-header h1 {
+.logo {
+  box-sizing: border-box;
   text-align: center;
   font-family: "Press Start 2P", cursive;
   color: black;
+  font-size: 1.5rem;
+  padding: 1em;
 }
 
 nav {
@@ -34,6 +38,7 @@ button {
   border: 2px solid black;
   box-shadow: -3px 3px black;
   margin-bottom: 2em;
+  cursor: pointer;
 }
 
 .news-container {
@@ -60,6 +65,10 @@ button {
   margin-top: 1em;
   padding: 0.5em;
   text-transform: uppercase;
+}
+
+#menu {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

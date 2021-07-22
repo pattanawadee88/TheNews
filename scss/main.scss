@@ -5,14 +5,22 @@ body{
     color: $color-primary;
     background-color: $bg-primary;
     font-family: $font-primary;
+    box-sizing: border-box;
 }
 
-header{
-    h1{
-        text-align: center;
-        font-family: $font-secondary;
-        color: $color-primary;
-    }
+.logo{
+    box-sizing: border-box;
+    text-align: center;
+    font-family: $font-secondary;
+    color: $color-primary;
+    font-size: 1.5rem;
+    padding: 1em;
+    // h1{
+    //     text-align: center;
+    //     font-family: $font-secondary;
+    //     color: $color-primary;
+    //     box-sizing: border-box;
+    // }
 }
 
 nav{
@@ -36,6 +44,7 @@ button{
     border: 2px solid black;
     box-shadow: -3px 3px black;
     margin-bottom: 2em;
+    cursor: pointer;
 }
 .news-container{
     padding: 0.5em;
@@ -58,4 +67,7 @@ button{
     margin-top: 1em;
     padding: 0.5em;
     text-transform: uppercase;
+}
+#menu{
+    cursor: pointer;
 }

@@ -6,6 +6,7 @@ localDateDOM.innerHTML = localDate.toDateString();
 
 
 
+
 // window.onload =  getnews();
 
     const newsHeadline = document.querySelector('.news-headline');
@@ -27,3 +28,11 @@ localDateDOM.innerHTML = localDate.toDateString();
     xhr.open('GET', url);
     xhr.send();
     
+
+// Display Nav Bar
+const nav = document.querySelector('.shownav');
+
+function displayNav(){
+    nav.style.display = 'block';
+    console.log('hello')
+}
