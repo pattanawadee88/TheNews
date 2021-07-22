@@ -4,13 +4,13 @@ body{
     margin: 0;
     color: $color-primary;
     background-color: $bg-primary;
-    font-family: 'Dosis', sans-serif;
+    font-family: $font-primary;
 }
 
 header{
     h1{
         text-align: center;
-        font-family: 'Press Start 2P', cursive;
+        font-family: $font-secondary;
         color: $color-primary;
     }
 }
@@ -45,11 +45,11 @@ button{
 .news-headline{
     font-size: 2rem;
     font-weight: bolder;
-    font-family: 'Dosis', sans-serif;
+    font-family: $font-primary;
     color: $color-primary;
 }
 .news-content{
-    font-family: 'Dosis', sans-serif;
+    font-family: $font-primary;
     color: rgb(104, 99, 99);
     margin-top: 0.2em;
 }

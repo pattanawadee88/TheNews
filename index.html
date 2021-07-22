@@ -33,31 +33,50 @@
         </article>
         <button class="read-more-btn" onclick="">Read more</button>
     </section>
-    
    
-<script>
-    window.onload =  getnews();
+    <script src="script.js">
+
+    </script>
+<!-- <script>
+    // window.onload =  getnews();
 
     const newsHeadline = document.querySelector('.news-headline');
     const newsContent = document.querySelector('.news-content');
     const btn = document.querySelector('.read-more-btn');
-    
-    function getnews(){
-      
-        // const apikey = '464ac3f62bf844eba24e0d2f52c72978';
-        
-        const url = 'https://api.nytimes.com/svc/topstories/v2/world.json?api-key=G9k66bXLmyMt6vv61ul58QwnTAau9ItH';
-        fetch(url).then((res) => {
-            return res.json()
-        }).then((data)=>{
-            console.log(data);
-            newsHeadline.innerHTML = data.results[0].abstract;
-            // newsContent.innerHTML = data.articles[8].description;
-            // console.log(data.articles[0].title)
-        })
-    }
-    btn.addEventListener('click', getnews);
+    const url = 'https://api.nytimes.com/svc/topstories/v2/world.json?api-key=G9k66bXLmyMt6vv61ul58QwnTAau9ItH';
 
-</script>
+    // make an Ajax request
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState ===4){
+            let news = JSON.parse(xhr.responseText)
+            console.log(news);
+            
+            // newsHeadline.innerHTML = news.results[5].title;
+        }
+    };
+    xhr.open('GET', url);
+    xhr.send();
+    
+    btn.addEventListener('click', (event)=> {
+        console.log(event.target)
+    })
+    // function getnews(){
+      
+    //     // const apikey = '464ac3f62bf844eba24e0d2f52c72978';
+        
+    //     const url = 'https://api.nytimes.com/svc/topstories/v2/world.json?api-key=G9k66bXLmyMt6vv61ul58QwnTAau9ItH';
+    //     fetch(url).then((res) => {
+    //         return res.json()
+    //     }).then((data)=>{
+    //         console.log(data);
+    //         newsHeadline.innerHTML = data.results[0].abstract;
+    //         // newsContent.innerHTML = data.articles[8].description;
+    //         // console.log(data.articles[0].title)
+    //     })
+    // }
+    // btn.addEventListener('click', getnews);
+
+</script> -->
 </body>
 </html>
