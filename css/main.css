@@ -56,6 +56,7 @@ button {
 }
 
 .read-more-btn {
+  background-color: #fabd02;
   margin-top: 1em;
   padding: 0.5em;
   text-transform: uppercase;
