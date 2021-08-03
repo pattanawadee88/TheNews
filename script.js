@@ -16,6 +16,7 @@ function displayNav(){
 // window.onload =  getnews();
 const newsHeadline = document.querySelector('.news-headline');
 const newsContent = document.querySelector('.news-content');
+const newsImg = document.querySelector('.news-img');
 const btn = document.querySelector('.read-more-btn');
 const url = 'https://api.nytimes.com/svc/topstories/v2/world.json?api-key=G9k66bXLmyMt6vv61ul58QwnTAau9ItH';
 
@@ -43,7 +44,7 @@ function generateNewsHTML(){
 requestData()
     .then( data => {
     newsHeadline.innerHTML = data.results[5].title;
-            // newsHeadline.innerHTML = news.results[5].title;
+    newsImg.src = data.results[5].multimedia[0].url;
     newsContent.innerHTML = data.results[5].abstract;
 
      console.log(data)})
