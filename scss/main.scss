@@ -16,7 +16,7 @@ html{
 .logo{
     text-align: center;
     font-family: $font-secondary;
-    color: $color-primary;
+    // color: $color-primary;
     font-size: 1.5rem;
     padding: 1em;
     // h1{
@@ -71,13 +71,16 @@ a{
 .news-container{
     padding: 0.5em;
     width: 90%;
-    margin: 0 auto;
+    margin: 1em auto;
 }
 .news-headline{
     font-size: 2rem;
     font-weight: bolder;
     font-family: $font-primary;
     color: $color-primary;
+}
+.news-img{
+    width: 100%;
 }
 .news-content{
     font-family: $font-primary;

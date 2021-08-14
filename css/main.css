@@ -17,7 +17,6 @@ html {
 .logo {
   text-align: center;
   font-family: "Press Start 2P", cursive;
-  color: black;
   font-size: 1.5rem;
   padding: 1em;
 }
@@ -72,7 +71,7 @@ a {
 .news-container {
   padding: 0.5em;
   width: 90%;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 .news-headline {
@@ -80,6 +79,10 @@ a {
   font-weight: bolder;
   font-family: "Dosis", sans-serif;
   color: black;
+}
+
+.news-img {
+  width: 100%;
 }
 
 .news-content {
