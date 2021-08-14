@@ -49,6 +49,12 @@ button{
     box-shadow: -3px 3px black;
     margin-bottom: 2em;
     cursor: pointer;
+    font-size: 0.8rem;
+}
+button:hover{
+    background-color: $bg-primary;
+    transition: background-color 1s ;
+
 }
 ul{
     padding: 0;

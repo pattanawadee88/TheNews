@@ -45,6 +45,12 @@ button {
   box-shadow: -3px 3px black;
   margin-bottom: 2em;
   cursor: pointer;
+  font-size: 0.8rem;
+}
+
+button:hover {
+  background-color: #F5F5F5;
+  transition: background-color 1s;
 }
 
 ul {

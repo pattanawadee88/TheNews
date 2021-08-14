@@ -67,6 +67,7 @@ function generateNewsHTML(data){
         //create button node
         let nodeBtn = document.createElement("button"); 
         nodeBtn.setAttribute("class","read-more-btn");
+        nodeBtn.setAttribute("src",data.results[i].url);
         nodeBtn.innerHTML = "Read more";
         nodeSection.appendChild(nodeBtn);
     }
