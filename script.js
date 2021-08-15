@@ -4,25 +4,13 @@ const localDateDOM= document.querySelector("time");
 /***** Display Date ******/ 
 localDateDOM.innerHTML = localDate.toDateString();
 
-// Display Nav Bar
-const nav = document.querySelector('.shownav');
 
-function displayNav(){
-    nav.style.display = 'block';
-    console.log('hello')
-}
 
-function readMore(){
-
-}
 
 // window.onload =  getnews();
-const newsHeadline = document.querySelector('.news-headline');
-const newsContent = document.querySelector('.news-content');
-const newsImg = document.querySelector('.news-img');
-const btn = document.querySelector('.read-more-btn');
+const newsContainer = document.getElementsByClassName('news-container');
 const url = 'https://api.nytimes.com/svc/topstories/v2/world.json?api-key=G9k66bXLmyMt6vv61ul58QwnTAau9ItH';
-const newsContainer = document.querySelector('.news-container');
+
 // make an Ajax request
 function requestData(){
     return new Promise((resolve,reject)=> {
@@ -87,3 +75,10 @@ requestData()
 
     
 
+     // Display Nav Bar
+const nav = document.querySelector('.shownav');
+
+function displayNav(){
+    document.querySelector('.shownav').style.display = "block";
+    document.querySelector('.shownav').style.minHeight = window.innerHeight+"px";
+}
