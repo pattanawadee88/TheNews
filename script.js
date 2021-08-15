@@ -12,6 +12,9 @@ function displayNav(){
     console.log('hello')
 }
 
+function readMore(){
+
+}
 
 // window.onload =  getnews();
 const newsHeadline = document.querySelector('.news-headline');
@@ -66,9 +69,11 @@ function generateNewsHTML(data){
         nodeSection.appendChild(nodeArticle);
         //create button node
         let nodeBtn = document.createElement("button"); 
+        let nodeLink = document.createElement("a"); 
         nodeBtn.setAttribute("class","read-more-btn");
-        nodeBtn.setAttribute("src",data.results[i].url);
-        nodeBtn.innerHTML = "Read more";
+        nodeLink.setAttribute("href",data.results[i].url);
+        nodeLink.innerHTML = "Read more";
+        nodeBtn.appendChild(nodeLink);
         nodeSection.appendChild(nodeBtn);
     }
     
